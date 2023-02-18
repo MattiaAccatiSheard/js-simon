@@ -9,8 +9,8 @@ const ZdaysEl = document.getElementById("z-days");
 const ZhoursEl = document.getElementById("z-hours");
 const ZminutesEl = document.getElementById("z-minutes");
 const ZsecondsEl = document.getElementById("z-seconds");
-const ZmSecondEl = document.getElementById("z-msecond")
-const ZtitleEl = document.getElementById("title");
+const ZmSecondEl = document.getElementById("z-mseconds")
+const ZtitleEl = document.getElementById("z-title");
 
 // ESEMPIO 1: PASTA
 // titleEl.innerHTML = "Butta la pasta!";
@@ -58,8 +58,8 @@ function stampaTempoTrascorso() {
 const ZclockCronometro = setInterval(ZstampaTempoTrascorso, 10);
 function ZstampaTempoTrascorso() {
     let currentTime = performance.now();
-    let startTime = startTime || currentTime;
-    let elapsedTime = currentTime - startTime;
+    // let startTime = currentTime;
+    let elapsedTime = currentTime;
 
 
     let seconds = parseInt((elapsedTime / 1000) % 60);
